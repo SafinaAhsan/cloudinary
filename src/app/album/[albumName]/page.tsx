@@ -1,20 +1,20 @@
-import ForceRefresh from "../components/force-refresh"
-import CloudinaryImage from "../components/shared/cloudinary-image"
-import ImageGrid from "../components/shared/image-grid"
-import { UploadButton } from "../components/shared/upload-button"
+import ForceRefresh from "@/app/components/force-refresh"
+import CloudinaryImage from "@/app/components/shared/cloudinary-image"
+import ImageGrid from "@/app/components/shared/image-grid"
 import cloudinary from "cloudinary"
 export type SearchResult={
     public_id:string
     tags:string[]
 }
-const GalleryPage = async ()=> {
+const AlbumPage = async ({params:{albumName}}:{
+  params:{albumName:string}
+})=> {
     const results= (await cloudinary.v2.search
-    .expression("resource_type:image")
+    .expression(`resource_type:image AND folder=${albumName}`)
     .sort_by("created_at","desc")
     .max_results(30)
     .with_field("tags")
     .execute()) as{resources: SearchResult[]}
-    console.log(results);
   
     
   return (
@@ -22,8 +22,8 @@ const GalleryPage = async ()=> {
     <ForceRefresh/>
     <div className="flex flex-col gap-8">
         <div className="flex justify-between">
-        <h1 className="text-4xl font-bold">GALLERY</h1>
-        <UploadButton/>
+        <h1 className="text-4xl font-bold">ALBUM {albumName}</h1>
+    
         </div>
 <ImageGrid images={results.resources}
 getImage={(imageData:SearchResult)=>{
@@ -39,4 +39,4 @@ getImage={(imageData:SearchResult)=>{
   )
 }
 
-export default GalleryPage
+export default AlbumPage

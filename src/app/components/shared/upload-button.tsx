@@ -1,16 +1,26 @@
 "use client"
 import { Button } from "@/components/ui/button";
+import { log } from "console";
 import { CldUploadButton } from "next-cloudinary";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { setTimeout } from "timers/promises";
+
 
 
 export const UploadButton = () => {
-    const [imageId,setImageId]=useState("")
-  return (
+  const router=useRouter()
+  const handleUpload=()=>{
+    router.refresh()
+  }
+   return (
     <div>
         <Button asChild>
-            <div className="flex gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg"
+           
+          <CldUploadButton 
+      onUpload={ handleUpload  }
+      uploadPreset="jvqejkno" >
+        <div className="flex gap-2 items-center">
+       <svg xmlns="http://www.w3.org/2000/svg"
          width="24" 
          height="24"
           viewBox="0 0 24 24" 
@@ -24,13 +34,9 @@ export const UploadButton = () => {
                 <polyline points="17 8 12 3 7 8"/>
         <line x1="12" x2="12" y1="3" y2="15"/>
         </svg>
-          <CldUploadButton 
-      onUpload={(result:any)=>{
-        setImageId(result.info.public_id);
-        
-      }}
-      uploadPreset="jvqejkno" />
-      </div>
+        UPLOAD
+        </div>
+        </CldUploadButton>
       </Button>
     </div>
   )
