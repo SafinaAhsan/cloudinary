@@ -5,6 +5,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from '@/components/ui/button'
 import Heart from './components/icons/heart'
 import Link from 'next/link'
+import Image from "next/image"
+import image1 from "../../public/images.jpeg"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -80,8 +82,13 @@ export default function RootLayout({
     <html lang="en" className='dark'>
       <body className={inter.className}>
       <div className="border-b">
-          <div className="flex h-16 items-center px-4 container mx-auto">
-            PHOTOSAPP
+          <div className="flex h-16 items-center px-4 container mx-auto gap-2">
+       <Image src={image1}
+       alt="PhotosApp"
+       width="80"
+       height="80"
+       />
+       PHOTOSAPP
             <div className="ml-auto flex items-center space-x-4">
             <Avatar>
   <AvatarImage src="https://github.com/shadcn.png" />

@@ -27,9 +27,12 @@ const AddToAlbumDialog = ({image,onClose}:{image:SearchResult,onClose:()=>void})
       if(!newOpenState){
       onClose()
       }  }}>
-    <DialogTrigger className="flex gap-2">
+    <DialogTrigger>
+    <Button  className="flex gap-2"
+    variant="ghost">
     <Folder />
         Add To Album
+        </Button>
     </DialogTrigger>
     <DialogContent className="sm:max-w-[375px]">
       <DialogHeader>
