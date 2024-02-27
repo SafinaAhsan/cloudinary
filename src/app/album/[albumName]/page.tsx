@@ -22,7 +22,7 @@ const AlbumPage = async ({params:{albumName}}:{
     <ForceRefresh/>
     <div className="flex flex-col gap-8">
         <div className="flex justify-between">
-        <h1 className="text-4xl font-bold">ALBUM {albumName}</h1>
+        <h1 className="text-4xl font-bold">Album {albumName}</h1>
     
         </div>
 <ImageGrid images={results.resources}

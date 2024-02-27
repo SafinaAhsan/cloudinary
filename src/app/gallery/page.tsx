@@ -26,7 +26,8 @@ const GalleryPage = async ({searchParams:{search}}:{searchParams:{search:string}
         <h1 className="text-4xl font-bold">GALLERY</h1>
         <UploadButton/>
         </div>
-        <SearchForm/>
+        <SearchForm
+        initialSearch={search}/>
 <ImageGrid images={results.resources}
 getImage={(imageData:SearchResult)=>{
   return(<CloudinaryImage

@@ -16,7 +16,7 @@ export default function EditPage({
             <ForceRefresh />
             <div className="flex flex-col gap-8">
                 <div className="flex justify-between">
-                    <h1 className="text-4xl font-bold">EDIT{publicId}</h1>
+                    <h1 className="text-4xl font-bold">EDIT</h1>
                 </div>
                 <div className="flex gap-4">
                 <Button variant="ghost" onClick={() => setTransformation(undefined)}>Clear All</Button>

@@ -61,6 +61,7 @@ const AddToAlbumDialog = ({image,onClose}:{image:SearchResult,onClose:()=>void})
             await AddImageToAlbum(image,albumName)
           }}
           type="submit">Add to Album</Button>
+          
         </DialogFooter>
     </DialogContent>
   </Dialog>

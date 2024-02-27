@@ -87,6 +87,7 @@ export default function RootLayout({
        alt="PhotosApp"
        width="80"
        height="80"
+       className='bg-black'
        />
        PHOTOSAPP
             <div className="ml-auto flex items-center space-x-4">

@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import {
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Folders } from "@/app/album/page"
 import Link from "next/link"
+import { DeleteFolder } from "../actions"
 
 export function AlbumCard({folders}:{folders:Folders}) {
   return (
@@ -27,6 +29,12 @@ export function AlbumCard({folders}:{folders:Folders}) {
                 View Album
             </Link>
         </Button>
+        <Button onClick={async()=>{
+          await DeleteFolder(folders.name)
+        }}>
+          Delete Album
+     
+       </Button>
       </CardFooter>
     </Card>
   )
