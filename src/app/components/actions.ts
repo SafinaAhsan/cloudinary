@@ -15,7 +15,3 @@ const publicId=parts.join("/")
     `${album}/${publicId}`
    )
 }
-export async function DeleteFolder(folderName: string) {
-   await cloudinary.v2.api.delete_folder(folderName);
-  
-  }

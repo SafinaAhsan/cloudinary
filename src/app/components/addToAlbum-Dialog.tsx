@@ -34,7 +34,7 @@ const AddToAlbumDialog = ({image,onClose}:{image:SearchResult,onClose:()=>void})
         Add To Album
         </Button>
     </DialogTrigger>
-    <DialogContent className="sm:max-w-[375px]">
+    <DialogContent className="w-[300px] sm:max-w-[375px]">
       <DialogHeader>
         <DialogTitle>Add To Album</DialogTitle>
         <DialogDescription>

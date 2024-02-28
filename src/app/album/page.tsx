@@ -12,11 +12,11 @@ const Album = async ()=> {
      return (
     <section>
     <ForceRefresh/>
-    <div className="flex flex-col gap-8">
+    <div className="px-6 sm:px-0 flex flex-col gap-8">
         <div className="flex justify-between">
         <h1 className="text-4xl font-bold">ALBUMS</h1>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="sm:grid grid-cols-3 gap-4">
         {folders.map((folder)=><AlbumCard 
         key={folder.path}
         folders={folder}/>)}

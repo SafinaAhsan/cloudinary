@@ -13,9 +13,9 @@ const FavoritePage = async () => {
     return (
         <section>
             <ForceRefresh />
-            <div className="flex flex-col gap-8">
+            <div className="px-6 sm:px-0 flex flex-col gap-8">
                 <div className="flex justify-between">
-                    <h1 className="text-4xl font-bold">FAVORITE IMAGES</h1>
+                    <h1 className="text-2xl sm:text-4xl font-bold">FAVORITE IMAGES</h1>
                 </div>
                 <FavoriteList initialResources={results.resources} />
 

@@ -19,7 +19,7 @@ const CloudinaryImage = (props:
     const { imageData, onUnheart } = props
     const [isFavorited, setIsFavorited] = useState(imageData.tags.includes("favorite"))
     return (
-        <div className="relative">
+        <div className="relative max-md:max-w-[300px] max-md:mx-auto">
             <CldImage {...props}
                 src={imageData.public_id
                 } /> {
@@ -46,8 +46,8 @@ const CloudinaryImage = (props:
                 )
             }
             <ImageMenu image={
-             imageData
-            }/>
+                imageData
+            } />
         </div>
     )
 }

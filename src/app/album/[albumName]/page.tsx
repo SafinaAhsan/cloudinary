@@ -20,7 +20,7 @@ const AlbumPage = async ({params:{albumName}}:{
   return (
     <section>
     <ForceRefresh/>
-    <div className="flex flex-col gap-8">
+    <div className="px-6 sm:px-0 flex flex-col gap-8">
         <div className="flex justify-between">
         <h1 className="text-4xl font-bold">Album {albumName}</h1>
     

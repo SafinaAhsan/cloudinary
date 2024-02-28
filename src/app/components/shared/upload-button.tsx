@@ -19,7 +19,7 @@ export const UploadButton = () => {
           <CldUploadButton 
       onUpload={ handleUpload  }
       uploadPreset="jvqejkno" >
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center mb-2 sm:mb-0">
        <svg xmlns="http://www.w3.org/2000/svg"
          width="24" 
          height="24"

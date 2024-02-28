@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/card"
 import { Folders } from "@/app/album/page"
 import Link from "next/link"
-import { DeleteFolder } from "../actions"
+import Deletefolder from "../delete-folder"
+
 
 export function AlbumCard({folders}:{folders:Folders}) {
   return (
@@ -30,7 +31,7 @@ export function AlbumCard({folders}:{folders:Folders}) {
             </Link>
         </Button>
         <Button onClick={async()=>{
-          await DeleteFolder(folders.name)
+          await Deletefolder(folders.name)
         }}>
           Delete Album
      

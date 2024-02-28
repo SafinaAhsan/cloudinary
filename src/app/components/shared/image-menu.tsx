@@ -15,9 +15,9 @@ import { Button } from "@/components/ui/button"
 const ImageMenu = ({image}:{image:SearchResult}) => {
   const[open,setOpen]=useState(false)
   return (
-    <div className="absolute top-2 right-2">
+    <div className="absolute top-2 right-2 z-50">
       <DropdownMenu open={open} onOpenChange={setOpen}>
-    <DropdownMenuTrigger >
+    <DropdownMenuTrigger className="z-50" >
     <Menu/>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
