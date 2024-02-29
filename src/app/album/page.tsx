@@ -16,10 +16,14 @@ const Album = async ()=> {
         <div className="flex justify-between">
         <h1 className="text-4xl font-bold">ALBUMS</h1>
         </div>
-        <div className="sm:grid grid-cols-3 gap-4">
-        {folders.map((folder)=><AlbumCard 
+        <div className="sm:grid grid-cols-3 sm:gap-4">
+        {folders.map((folder)=>
+        <div 
         key={folder.path}
-        folders={folder}/>)}
+        className="mb-4 sm:mb-0"><AlbumCard 
+      
+        folders={folder}
+        /></div>)}
       </div>
         </div>
     </section>

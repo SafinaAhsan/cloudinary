@@ -19,7 +19,7 @@ const ImageGrid = ({ images, getImage }: {
         getColumns(3),
       ].map((column, idx) => (
         <div
-          key={idx} className="flex flex-col gap-4">
+          key={idx} className="flex flex-col gap-4 mb-4 sm:mb-0">
           {column.map(getImage)}
 
         </div>

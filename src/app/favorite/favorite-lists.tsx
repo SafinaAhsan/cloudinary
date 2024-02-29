@@ -15,6 +15,7 @@ const FavoriteList = ({ initialResources }: { initialResources: SearchResult[] }
                 imageData={imageData}
                 width="300"
                 height="400"
+                className="mt-2 sm:mt-0"
                 alt="an image of something"
                 onUnheart={(unheartedResource) => {
                     setResources((currentResources) =>
@@ -29,8 +30,5 @@ const FavoriteList = ({ initialResources }: { initialResources: SearchResult[] }
       
                
             )}
-
-
-    
 
 export default FavoriteList

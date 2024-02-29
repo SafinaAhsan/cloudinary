@@ -17,8 +17,9 @@ const FavoritePage = async () => {
                 <div className="flex justify-between">
                     <h1 className="text-2xl sm:text-4xl font-bold">FAVORITE IMAGES</h1>
                 </div>
+               
                 <FavoriteList initialResources={results.resources} />
-
+                
             </div>
         </section>
     )
