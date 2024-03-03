@@ -11,7 +11,7 @@ const Album = async () => {
   }
   return (
     <section>
-      <ForceRefresh />
+      {/* <ForceRefresh /> */}
       <div className="px-6 sm:px-0 flex flex-col gap-8">
         <div className="flex justify-between">
           <h1 className="text-4xl font-bold">ALBUMS</h1>

@@ -12,7 +12,7 @@ const FavoritePage = async () => {
         .execute()) as { resources: SearchResult[] }
     return (
         <section>
-            <ForceRefresh />
+            {/* <ForceRefresh /> */}
             <div className="px-6 sm:px-0 flex flex-col gap-8">
                 <div className="flex justify-between">
                     <h1 className="text-2xl sm:text-4xl font-bold">FAVORITE IMAGES</h1>
