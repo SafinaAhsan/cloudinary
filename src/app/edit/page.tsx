@@ -1,6 +1,5 @@
 "use client"
 import { CldImage } from "next-cloudinary"
-import ForceRefresh from "../components/force-refresh"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 
@@ -13,7 +12,6 @@ export default function EditPage({
     const [transformation, setTransformation] = useState<undefined | "crop" | "blur" |"grayscale"|"pixelate" |"removeBackground">()
     return (
         <section>
-            {/* <ForceRefresh /> */}
             <div className="flex flex-col gap-8">
                 <div className="flex justify-between">
                     <h1 className="text-4xl font-bold">EDIT</h1>

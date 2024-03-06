@@ -1,4 +1,3 @@
-import ForceRefresh from "@/app/components/force-refresh"
 import CloudinaryImage from "@/app/components/shared/cloudinary-image"
 import ImageGrid from "@/app/components/shared/image-grid"
 import cloudinary from "cloudinary"

@@ -3,12 +3,12 @@
 // import { useEffect } from "react"
 
 
-// const ForceRefresh = () => {
+const ForceRefresh = () => {
 //   const router=useRouter()
 //   useEffect(()=>{
 //     router.refresh()
 //   }, [])
-//   return <></>
-// }
+  return <></>
+}
 
-// export default ForceRefresh
+export default ForceRefresh
