@@ -1,4 +1,4 @@
-import ForceRefresh from "../components/force-refresh"
+// import ForceRefresh from "../components/force-refresh"
 import CloudinaryImage from "../components/shared/cloudinary-image"
 import ImageGrid from "../components/shared/image-grid"
 import { UploadButton } from "../components/shared/upload-button"
@@ -20,7 +20,7 @@ const GalleryPage = async ({ searchParams: { search } }: { searchParams: { searc
 
   return (
     <section>
-      <ForceRefresh />
+      {/* <ForceRefresh /> */}
       <div className=" px-6 sm:px-0 sm:flex flex-col gap-8">
         <div className="sm:flex justify-between">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-0">GALLERY</h1>
